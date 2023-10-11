@@ -1,0 +1,238 @@
+% Quell Code
+
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage[top = 2cm, bottom = 2cm, left = 2cm, right = 2cm, headheight = 17pt, includehead, includefoot, heightrounded]{geometry}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=orange]{hyperref}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{xargs}
+\usepackage{twemojis}
+\usepackage{verbatim}
+\usepackage{graphicx}
+%----------------------------   new Definitions --------------------------------
+
+\definecolor{headercolor}{RGB}{200,200,200} % define header color
+
+\newcommand{\header}[1]{%
+  % clear all header fields
+    \fancyhead{}%
+    \fancyhead[C]{\colorbox{headercolor}{\parbox{\dimexpr\textwidth-2\fboxsep}{\centering\textbf{WhatsApp Kontakte}}}}%
+}
+
+\begin{comment}
+\newcommand{\fooder}[1]{
+    \fancyfoot{}%
+    \fancyfoot[C]{\colorbox{headercolor}{%
+        \parbox{\dimexpr\textwidth-2\fboxsep}{%
+            \centering%
+            #1
+            }%
+        }%
+    }%
+}%
+\end{comment}
+
+
+\newcommand{\fooder}[1]{
+    \fancyfoot{}%
+    \fancyfoot[C]{\colorbox{headercolor}{%
+        \parbox{\dimexpr\textwidth-2\fboxsep}{%
+            \centering%
+            Infos
+            }%
+        }%
+    }%
+}%
+
+
+\newenvironment{indentedtext}[1]%
+{%
+    \begin{list}{}%
+    {%
+        \setlength{\leftmargin}{#1}%
+        \setlength{\parskip}{0pt}%
+    }%
+    \item%
+}%
+{\end{list}}
+
+
+
+
+\pagestyle{fancy}
+
+\newcommand{\sectionstar}[1]{%
+  %\clearpage % start on a new page
+  \vspace{1.4cm}
+  \section*{#1}
+  \header{#1} % set the header to the section title
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}
+  %\fooder{\href{#2}{WhatsApp des Modules #1}}
+}
+
+\newcommand{\sectionstarInto}[1]{%
+  %\clearpage % start on a new page
+  \vspace{3cm}
+  \section*{#1}
+  \header{#1} % set the header to the section title
+  \phantomsection
+  \addcontentsline{toc}{section}{#1}
+  \fooder{#1}
+}
+
+\newcommand{\hrefDouble}[1]{
+    \href{#1}{#1}
+}  
+
+
+%-------------------------------------------------------------------------------
+
+%=============================== TOC HACKS ===============================
+% If you reading this and know better, you can contact me via my contact 
+% information below
+
+\begin{document}
+% backup the original definition of pagebreak
+\let\oldclearpage\clearpage
+
+% redefine new pagebreak, to do nothign
+\renewcommand{\clearpage}{}
+
+\newpage
+% print the information section
+% \sectionstarInto{Info und Kontaktdaten}
+% Scale the bold text to fit the page
+\noindent\resizebox{0.4\textwidth}{!}{\textbf{Info und Kontaktdaten}}\\
+Mein Name ist Artem. Dies ist eine Liste aller WhatsApp Gruppen der Informatik Fächer der HHU.\\
+\noindent Ich habe \textbf{keine Zugehörigkeit zur Fachschaft} und bitte daher darum, sie bezüglich dieser Gruppen nicht anzuschreiben. Sollte Hilfe erforderlich sein, kontaktieren Sie mich bitte.
+
+\begin{center}
+\begin{tabular}{rl}
+     WhatsApp: & @Artem or 0157 77335953\\
+     Discord: & redart15\\
+     Email: & \href{mailto:arbet100@uni-duesseldorf.de}{arbet100@uni-duesseldorf.de}\\
+     Rocketchat & arbet100\\
+\end{tabular}    
+\end{center}
+
+\noindent Indem du einer der hier aufgeführten Gruppen beitrittst, erklärst du dich mit dem \textbf{Verhaltenskodex(Code of Conduct)} einverstanden.
+\\
+\large{\textbf{Code of Conduct}}
+\begin{enumerate}
+    \item \textbf{Kein Spam}\\
+    Studenten sollen in der Lage sein, miteinander vernünftig kommunizieren zu können.
+    \item \textbf{No Off-Topic}\\
+    Bleibt wenn möglich nah bei Thema, damit der Chat übersichtlich bleibt. 
+    \item \textbf{Keine Kontroversen Themen}\\
+    Um eine freundliche und einladende Atmosphäre zu schaffen, verzichtet bitte auf Gespräche über Politik oder Religion.
+    \item \textbf{Respektvoll miteinander umgehen.}\\
+    Respektvoller Umgang unter Studenten fördert eine produktive und kooperative Lernumgebung. 
+    \item \textbf{Sich benehmen}.\\
+    Da die Gruppe öffentlich ist, ist es angebracht, sich in angemessener Weise zu verhalten.
+\end{enumerate}
+Gravierende Verstöße könnten sich nachteilig auf die akademische Laufbahn an der Heinrich-Heine-Universität auswirken.
+
+Links zu Sciebo und Github gibt es auf nachfrage. heir mehr zu
+
+% print toc wothout pagebreak
+\pagebreak
+\tableofcontents
+\pagebreak
+ % restore the original definition of \clearpage
+\let\clearpage\oldclearpage
+%=============================== TOC HACKS ===============================
+%------------------------------   Section  -------------------------------
+\sectionstar{Mathe I \& II \& III}\vspace{-0.4cm}
+This is a dumbster fire. Sorry no hyperlink.\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Stochastick}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/LgT4ubW1VVVCrsNJnIpt8A}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Theoretische Informatik}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/KGRPuMgl4mhLHGMnrDnREa}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Programmierung}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/Ell9qEO7hcL3r6jav09qOA}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Programmierpraktikum I}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/JTKcWRiKw2RLmFLwYGjy6h}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Programmierpraktikum II}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/HdEB5oJyVWwA7Eyhmd0oeq}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Algorithmen und Datenstruckturen}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/ITs27Jn4lD6DJlZ5rdzAw0}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{C-Programmierung}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/Eb4pS5DOaFXGUfYgD8LdQr}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Rechenarchitektur}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{missing link}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Computernetzwerke}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/ING50WITo3lH3B3FGZtIpp}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Verteilte Systeme}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/IOEpvQYoxjM6RMGzerLFQK}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Betriebssysteme}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/Cc6EJDi43FyL3sFEKtmUlt}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Algorithmen der BioInformatik}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/LvlbQS8JU355vJmEwP5P1K}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Graphenalgorithmen}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/Ey5SylUILcf1IolHYOao2p
+}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Cluster Algortihmen}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:} \hrefDouble{https://chat.whatsapp.com/CypURvSBVe9HyePNummqJT}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Modelling Methabolic Networks}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/LNrA4551HxkBQrvSEldRlk}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Datenbanken}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/KXN36Ol4QC88WMKt4M3PuN}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Datenbanken II}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/G1KYkXgCjEA1hbB0eE5ysW}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Data Science}\vspace{-0.4cm}
+\noindent Welcome to Mathe IV \twemoji{heart suit}\\
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/BzKT0DFYC5JKZZbDwVqsXm}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Data Visualisierung}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/HkQRHceI8EFLhREo9SdKTL}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Competetive Programming A \& B}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/BhWYZJ2iZ7Y1oVfiGjEl6n}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Einführung in die Funktionale Programmierung}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/EuB1aiACCd4GWlwZS9FVrL}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Einführung in die Logische Programmierung}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{missing link}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Digitale Innovation}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/HU7lCRJ5NEn0fn2QcW278I}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Einführung in die Naturwissenschaft}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/II5R76z8tK72za3NhSs1xv}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Wiseschaftliches Arbeiten}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{missing link}\vspace{-1cm}
+%------------------------------   Section  -------------------------------
+\sectionstar{Kryptokomplexität I}\vspace{-0.4cm}
+\noindent \textbf{WhatsApp:}\hrefDouble{https://chat.whatsapp.com/EgkbLKVcbuV7YRSQhZW2sR}\vspace{-1cm}
+
+
+https://chat.whatsapp.com/EgkbLKVcbuV7YRSQhZW2sR
+\end{document}
+%===============================  END  =========================================
