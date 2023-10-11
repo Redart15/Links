@@ -3,14 +3,14 @@
 Mein Name ist Artem. Dies ist eine Liste aller WhatsApp Gruppen der Informatik Fächer der HHU.\\
 \noindent Ich habe \textbf{keine Zugehörigkeit zur Fachschaft} und bitte daher darum, sie bezüglich dieser Gruppen nicht anzuschreiben. Sollte Hilfe erforderlich sein, kontaktieren Sie mich bitte.
 
-\begin{center}
+$$\begin{center}
 \begin{tabular}{rl}
      WhatsApp: & @Artem or 0157 77335953\\
      Discord: & redart15\\
      Email: & \href{mailto:arbet100@uni-duesseldorf.de}{arbet100@uni-duesseldorf.de}\\
      Rocketchat & arbet100\\
 \end{tabular}    
-\end{center}
+\end{center}$$
 
 \noindent Indem du einer der hier aufgeführten Gruppen beitrittst, erklärst du dich mit dem \textbf{Verhaltenskodex(Code of Conduct)} einverstanden.
 \\
